@@ -15,29 +15,46 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 17, 24, 39;
+    --background-end-rgb: 17, 24, 39;
   }
 }
 
 .dark {
-  --background: #1f2937;
-  --foreground: #ffffff;
-  --primary: #60a5fa;
-  --primary-foreground: #ffffff;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    );
+  --background: #111827;
+  --foreground: #9ca3af;
+  --primary: #818cf8;
+  --primary-foreground: #9ca3af;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --border: #374151;
+  --input: #374151;
+  --ring: #818cf8;
 }
 
 .dark body {
   color: var(--foreground);
   background-color: var(--background);
+  background-image: none;
+}
+
+/* Add these additional dark mode utility classes */
+.dark .bg-background {
+  background-color: var(--background);
+}
+
+.dark .text-foreground {
+  color: var(--foreground);
+}
+
+.dark .border-border {
+  border-color: var(--border);
+}
+
+.dark .bg-muted {
+  background-color: var(--muted);
+}
+
+.dark .text-muted-foreground {
+  color: var(--muted-foreground);
 }
